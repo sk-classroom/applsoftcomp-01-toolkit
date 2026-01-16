@@ -4,7 +4,11 @@ Welcome to your Git practice assignment! This repository is where you'll submit 
 
 ## Running the Notebook
 
-This assignment uses a Marimo notebook (`01-toolkit.py`). Follow these steps to get started.
+This assignment uses a Marimo notebook (`01-toolkit.py`).
+
+**What is [Marimo](https://marimo.io)?** Marimo is a reactive Python notebook that's stored as pure Python files (not JSON like Jupyter). When you run a cell, Marimo automatically runs all dependent cells, keeping your code and outputs consistent. Unlike traditional notebooks, Marimo notebooks are git-friendly, executable as scripts, and can be deployed as web apps. No hidden state, no out-of-order execution problems.
+
+Follow these steps to get started.
 
 ### Step 1: Install uv
 
