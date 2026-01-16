@@ -25,7 +25,7 @@ Your instructor will provide an assignment invitation link on Brightspace. When 
 Click the link to your repository. You'll be taken to your repository page on GitHub. The URL in your browser will look like:
 
 ```
-https://github.com/sk-classroom/git-practice-assignment-YOUR-USERNAME
+https://github.com/sk-classroom/01-toolkit-YOUR-USERNAME
 ```
 
 This is your personal repository page. Keep this page open—you'll need to copy the clone URL from here.
@@ -38,7 +38,7 @@ In the dropdown:
 
 1. You'll see three tabs: **HTTPS**, **SSH**, and **GitHub CLI**
 2. Make sure **HTTPS** is selected (it should be underlined)
-3. You'll see a URL that looks like: `https://github.com/sk-classroom/git-practice-assignment-YOUR-USERNAME.git`
+3. You'll see a URL that looks like: `https://github.com/sk-classroom/01-toolkit-YOUR-USERNAME.git`
 4. Click the copy icon (📋) next to the URL to copy it to your clipboard
 
 Now you have your repository's clone URL!
@@ -48,8 +48,8 @@ Now you have your repository's clone URL!
 Open your terminal and navigate to where you want to work (e.g., your Documents folder or a projects directory). Then clone your repository using the URL you just copied:
 
 ```bash
-git clone https://github.com/sk-classroom/git-practice-assignment-YOUR-USERNAME.git
-cd git-practice-assignment-YOUR-USERNAME
+git clone https://github.com/sk-classroom/01-toolkit-YOUR-USERNAME.git
+cd 01-toolkit-YOUR-USERNAME
 ```
 
 You can also just paste the URL if you copied it in Step 2. This command creates a local copy of the repository on your computer.
@@ -68,7 +68,9 @@ Now follow the Git exercises in the **01-toolkit.qmd** notebook. You'll create a
 
 Work directly in this cloned directory. All your commits are already connected to GitHub!
 
-### Step 5: Push Your Work
+### Step 5: Push Your Work to GitHub (CRITICAL!)
+
+**⚠️ IMPORTANT:** Your instructor will review your work directly on GitHub. You MUST push all your commits and branches for your work to be graded. Work that only exists on your local computer cannot be seen or graded.
 
 After completing each major step, push your commits to GitHub:
 
@@ -82,18 +84,35 @@ git push origin use-numpy-mean
 git push origin add-mean-docstring
 ```
 
-You can push as many times as you want. Each push updates your GitHub repository.
+**Push frequently!** Every time you complete a section of the exercises, push your work. This ensures:
+- Your work is backed up
+- Your instructor can see your progress
+- Your local repository and GitHub are in sync
 
-### Step 6: Verify and Submit
+### Step 6: Verify Everything is Pushed
 
-Before submitting, visit your repository on GitHub (the same page from Step 1) and verify you see:
+Before you're done, verify that your local work is synchronized with GitHub. Run this command to check:
+
+```bash
+git status
+```
+
+You should see: `"Your branch is up to date with 'origin/main'"` and `"nothing to commit, working tree clean"`.
+
+If you see unpushed commits or uncommitted changes, make sure to commit and push them!
+
+**Final verification checklist:**
+
+Visit your repository on GitHub (the same page from Step 1) and verify you see:
 
 - [ ] The `analysis.py` file with both `calculate_mean()` and `calculate_median()` functions
-- [ ] At least 5 commits showing your progression
-- [ ] Multiple branches: `add-median`, `use-numpy-mean`, `add-mean-docstring`
-- [ ] A merge commit demonstrating conflict resolution
+- [ ] At least 5 commits showing your progression (click on "commits" to see the history)
+- [ ] Multiple branches in the branches dropdown: `main`, `add-median`, `use-numpy-mean`, `add-mean-docstring`
+- [ ] A merge commit demonstrating conflict resolution (visible in commit history)
 
-Then submit your repository URL on Brightspace.
+**If anything is missing from GitHub, you need to push it!**
+
+Your instructor will review your GitHub repository directly—there's no need to submit a URL on Brightspace.
 
 ## Checking Your Work
 
@@ -119,9 +138,13 @@ If you encounter issues:
 
 - **Can't find repository URL:** Click the green "Code" button on your repository page
 - **Clone failed:** Make sure you copied the complete URL including the `.git` at the end
-- **Push rejected:** Make sure you're inside the cloned directory (`cd git-practice-assignment-YOUR-USERNAME`)
+- **Push rejected:** Make sure you're inside the cloned directory (`cd 01-toolkit-YOUR-USERNAME`)
+- **Not sure if everything is pushed:** Run `git status` and look for "Your branch is up to date with 'origin/main'"
+- **Changes not appearing on GitHub:** Make sure you ran `git push origin main` and check that you're viewing the correct branch on GitHub
 - **Merge conflicts:** Follow the conflict resolution steps in the notebook carefully
 - **General questions:** Post on the course discussion board or attend office hours
+
+**Remember:** Your instructor can only see what's on GitHub, not what's on your local computer. When in doubt, push!
 
 ## Tips for Success
 
