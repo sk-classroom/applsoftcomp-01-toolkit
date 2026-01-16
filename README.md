@@ -2,9 +2,41 @@
 
 Welcome to your Git practice assignment! This repository is where you'll submit your work for the toolkit module.
 
+## Running the Notebook
+
+This assignment uses a Marimo notebook (`01-toolkit.py`). Follow these steps to get started.
+
+### Step 1: Install uv
+
+If you don't have `uv` installed yet, install it with:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+This command works on macOS, Linux, and WSL on Windows.
+
+**Windows Users:** You need to install Windows Subsystem for Linux (WSL) first. Open PowerShell as Administrator and run:
+
+```bash
+wsl --install
+```
+
+Restart your computer and use the Ubuntu terminal for all commands.
+
+### Step 2: Run the Marimo Notebook
+
+Navigate to this directory and run:
+
+```bash
+uv run marimo edit 01-toolkit.py
+```
+
+The `uv run` command automatically installs all dependencies and launches the Marimo notebook in your web browser.
+
 ## Your Task
 
-Complete all Git exercises from the **01-toolkit.qmd** notebook in the course materials. You'll practice:
+Complete all Git exercises from the **01-toolkit.py** notebook. You'll practice:
 
 - Making your first commits with `git add` and `git commit`
 - Working with branches using `git branch` and `git checkout`
@@ -14,23 +46,9 @@ Complete all Git exercises from the **01-toolkit.qmd** notebook in the course ma
 
 ## Getting Started
 
-### Step 1: Accept the Assignment and Get Your Repository
-
-Your instructor will provide an assignment invitation link on Brightspace. When you click this link:
-
-1. You'll be asked to accept the assignment (you may need to sign in to GitHub first)
-2. GitHub Classroom will create a personal repository for you
-3. After a few moments, you'll see a confirmation page with a link to your repository
-
-Click the link to your repository. You'll be taken to your repository page on GitHub. The URL in your browser will look like:
-
-```
-https://github.com/sk-classroom/01-toolkit-YOUR-USERNAME
-```
-
 This is your personal repository page. Keep this page open—you'll need to copy the clone URL from here.
 
-### Step 2: Find and Copy Your Repository Clone URL
+### Step 1: Find and Copy Your Repository Clone URL
 
 On your repository page, look for the green **"<> Code"** button near the top right (below the repository name). Click it to open a dropdown menu.
 
@@ -43,7 +61,7 @@ In the dropdown:
 
 Now you have your repository's clone URL!
 
-### Step 3: Clone Your Repository to Your Computer
+### Step 2: Clone Your Repository to Your Computer
 
 Open your terminal and navigate to where you want to work (e.g., your Documents folder or a projects directory). Then clone your repository using the URL you just copied:
 
@@ -54,83 +72,9 @@ cd 01-toolkit-YOUR-USERNAME
 
 You can also just paste the URL if you copied it in Step 2. This command creates a local copy of the repository on your computer.
 
-### Step 4: Complete the Exercises
+### Step 3: Complete the Exercises
 
-Now follow the Git exercises in the **01-toolkit.qmd** notebook. You'll create an `analysis.py` file and make commits as you work through:
-
-1. Creating your first commits
-2. Fixing a bug and committing the fix
-3. Creating a branch called `add-median`
-4. Adding a median function and committing
-5. Merging the branch
-6. Creating merge conflicts with `use-numpy-mean` and `add-mean-docstring` branches
-7. Resolving the conflicts
-
-Work directly in this cloned directory. All your commits are already connected to GitHub!
-
-### Step 5: Push Your Work to GitHub (CRITICAL!)
-
-**⚠️ IMPORTANT:** Your instructor will review your work directly on GitHub. You MUST push all your commits and branches for your work to be graded. Work that only exists on your local computer cannot be seen or graded.
-
-After completing each major step, push your commits to GitHub:
-
-```bash
-# Push main branch
-git push origin main
-
-# Push other branches as you create them
-git push origin add-median
-git push origin use-numpy-mean
-git push origin add-mean-docstring
-```
-
-**Push frequently!** Every time you complete a section of the exercises, push your work. This ensures:
-- Your work is backed up
-- Your instructor can see your progress
-- Your local repository and GitHub are in sync
-
-### Step 6: Verify Everything is Pushed
-
-Before you're done, verify that your local work is synchronized with GitHub. Run this command to check:
-
-```bash
-git status
-```
-
-You should see: `"Your branch is up to date with 'origin/main'"` and `"nothing to commit, working tree clean"`.
-
-If you see unpushed commits or uncommitted changes, make sure to commit and push them!
-
-**Final verification checklist:**
-
-Visit your repository on GitHub (the same page from Step 1) and verify you see:
-
-- [ ] The `analysis.py` file with both `calculate_mean()` and `calculate_median()` functions
-- [ ] At least 5 commits showing your progression (click on "commits" to see the history)
-- [ ] Multiple branches in the branches dropdown: `main`, `add-median`, `use-numpy-mean`, `add-mean-docstring`
-- [ ] A merge commit demonstrating conflict resolution (visible in commit history)
-
-**If anything is missing from GitHub, you need to push it!**
-
-Your instructor will review your GitHub repository directly—there's no need to submit a URL on Brightspace.
-
-## Checking Your Work
-
-Use these commands to check your progress:
-
-```bash
-# See all your commits
-git log --oneline --graph --all
-
-# See all your branches
-git branch -a
-
-# Check current status
-git status
-
-# See what branches exist on GitHub
-git branch -r
-```
+Run `uv run marimo edit 01-toolkit.py` to open the notebook. Now follow the Git exercises in the **01-toolkit.py** notebook.
 
 ## Getting Help
 
